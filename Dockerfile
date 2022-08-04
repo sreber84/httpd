@@ -14,6 +14,8 @@ RUN sed -i -e '151s%AllowOverride None%AllowOverride All%' /etc/httpd/conf/httpd
 
 RUN chmod 755 /usr/bin/exec-httpd
 RUN chmod 777 /run/httpd
+RUN chmod 777 /var/lib/httpd
+RUN chmod 777 /var/log/httpd
     
 USER 1001
 
