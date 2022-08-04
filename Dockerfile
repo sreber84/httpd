@@ -8,6 +8,8 @@ EXPOSE 8443
     
 COPY exec-httpd /usr/bin/exec-httpd
 COPY index.html /var/www/html/index.html
+
+RUN chmod 755 /usr/bin/exec-httpd
     
 USER 1001
 
