@@ -1,8 +1,5 @@
 #!/bin/bash
  
 set -eu
-
-sed -i -e 's/^Listen 80/Listen 0.0.0.0:8080/' /etc/httpd/conf/httpd.conf
-sed -i -e '151s%AllowOverride None%AllowOverride All%' /etc/httpd/conf/httpd.conf
  
 exec httpd -D FOREGROUND $@
