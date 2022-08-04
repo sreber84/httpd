@@ -13,6 +13,7 @@ RUN sed -i -e 's/^Listen 80/Listen 0.0.0.0:8080/' /etc/httpd/conf/httpd.conf
 RUN sed -i -e '151s%AllowOverride None%AllowOverride All%' /etc/httpd/conf/httpd.conf
 
 RUN chmod 755 /usr/bin/exec-httpd
+RUN chmod 777 /run/httpd
     
 USER 1001
 
