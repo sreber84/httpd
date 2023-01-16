@@ -12,7 +12,7 @@ COPY index.html /var/www/html/index.html
 RUN mkdir -p /var/www/html/page1
 COPY page-1.html /var/www/html/page1/index.html
 RUN mkdir -p /var/www/html/page2
-COPY page-2.html /var/www/html/page1/index.html
+COPY page-2.html /var/www/html/page2/index.html
 
 RUN sed -i -e 's/^Listen 80/Listen 0.0.0.0:8080/' /etc/httpd/conf/httpd.conf
 RUN sed -i -e '151s%AllowOverride None%AllowOverride All%' /etc/httpd/conf/httpd.conf
