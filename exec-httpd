@@ -1,5 +1,5 @@
 #!/bin/bash
- 
+# Starting httpd server
 set -eu
  
 exec httpd -D FOREGROUND $@
